@@ -1,0 +1,28 @@
+{
+  "name": "riseup---portafolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "concurrently": "^8.0.1",
+    "body-parser": "^1.20.2",
+    "nodemailer": "^6.9.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "json-server": "^0.17.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.1"
+}
+}
