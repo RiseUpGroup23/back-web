@@ -11,11 +11,15 @@ const app = express()
 const PORT = 3000
 
 // app.use(cors());
-const corsOptions = {
-    origin: 'http://localhost:5173', // replace with your frontend URL
-    optionsSuccessStatus: 200,
-  };
-app.use(cors(corsOptions))
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true,
+  }));
+// const corsOptions = {
+//     origin: 'http://localhost:5173', // replace with your frontend URL
+//     optionsSuccessStatus: 200,
+//   };
+// app.use(cors(corsOptions))
 app.use(bodyParser.json())
 // app.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', 'https://localhost:5173'); // update to match the domain you will make the request from
