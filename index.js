@@ -10,15 +10,20 @@ const cors = require('cors')
 const app = express()
 const PORT = 3000
 
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:5173', // replace with your frontend URL
+    optionsSuccessStatus: 200,
+  };
+app.use(cors(corsOptions))
 app.use(bodyParser.json())
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://localhost:5173'); // update to match the domain you will make the request from
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-    next();
-  });
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', 'https://localhost:5173'); // update to match the domain you will make the request from
+//     res.header('Access-Control-Allow-Credentials', 'true');
+//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+//     next();
+//   });
 
 app.post('/enviar-correo', async (req, res) => {
     console.log("Hola");
