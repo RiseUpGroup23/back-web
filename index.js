@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   });
 
 app.get('/', async (req, res ) => {
-    res.send("Hola");
+    res.send("Back andando bien");
 })
 
 app.post('/enviar-correo', async (req, res) => {
