@@ -20,6 +20,10 @@ app.use((req, res, next) => {
     next();
   });
 
+app.get('/', async (req, res ) => {
+    res.send("Hola");
+})
+
 app.post('/enviar-correo', async (req, res) => {
     console.log("Hola");
     const formData = req.body;
