@@ -25,13 +25,13 @@ app.post('/enviar-correo', async (req, res) => {
             host: 'smtp.gmail.com',
             port: 587,
             auth: {
-                user: 'aguirreernesto2001@gmail.com',
-                pass: 'pccvtkplzofydlxi',
+                user: 'nicolasriseup@gmail.com',
+                pass: 'eotx xdaq hbqn xibs',
             },
         });
 
         const mensaje = {
-            from: 'aguirreernesto2001@gmail.com',
+            from: 'nicolasriseup@gmail.com',
             to: 'riseupgroup23@gmail.com',
             subject: 'Nueva Empresa',
             text: `
